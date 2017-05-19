@@ -52,9 +52,9 @@ UserSchema.methods.comparePassword = function(candidatePassword, callback) {
 
 var User = mongoose.model('User', UserSchema);
 
-var itemModel = mongoose.model('items', itemsSchema);
+var Item = mongoose.model('items', itemsSchema);
 
 module.exports = {
-  User: User,
-  itemModel: itemModel
+  userModel: User,
+  itemModel: Item
 };

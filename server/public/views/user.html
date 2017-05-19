@@ -2,20 +2,13 @@
 
 <input class = 'contains' type="checkbox" ng-model="myCheck"> <h7>Toggle logout screen</h7>
 <div ng-hide="myCheck">
-
-<div class="contain">
-
-
-  <h1 id="welcome" class="lead">Welcome, {{uc.userName}}!</h1>
-
+  <div class="contain">
+    <h1 id="welcome" class="lead">Welcome, {{uc.userName}}!</h1>
     <h1>This is the user page!</h1>
+    <button class="btn btn-danger" ng-click="uc.logout()">Log Out</button></div>
+  </div>
 
-   <button class="btn btn-danger" ng-click="uc.logout()">Log Out</button></div>
-</div>
-
-<!-- starting input fields for shelf -->
-
-
-<input ng-model="uc.description" type="text" name="alias" value="" placeholder="item to add...">
-<input ng-model="uc.imgURL" type="text" name="alias" value="" placeholder="add img url...">
-<button ng-click = "uc.addItem()" class = 'btn btn-success' type="button" name="button">Add Shelf Item</button>
+  <!-- starting input fields for shelf -->
+  <input ng-model="uc.description" type="text" name="alias" value="" placeholder="item to add...">
+  <input ng-model="uc.imgURL" type="text" name="alias" value="" placeholder="add img url...">
+  <button ng-click = "uc.addItem()" class = 'btn btn-success' type="button" name="button">Add Shelf Item</button>

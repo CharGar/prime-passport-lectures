@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Express / Passport</title>
-        <link rel="stylesheet" href="/vendors/bootstrap.min.css">
-        <link rel="stylesheet" href="/assets/styles/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Barrio|Black+Ops+One|Creepster|Ewert|Monoton" rel="stylesheet">
-        <script type="text/javascript" src="/vendors/angular.min.js"></script>
-        <script type="text/javascript" src="/vendors/angular-route.min.js"></script>
-        <script type="text/javascript" src="/assets/scripts/clientapp.js"></script>
-        <script src="assets/scripts/services/service.js" charset="utf-8"></script>
-        <script type="text/javascript" src="/assets/scripts/controllers/login.controller.js"></script>
-        <script type="text/javascript" src="/assets/scripts/controllers/user.controller.js"></script>
-        <script src="/assets/scripts/controllers/public.controller.js" charset="utf-8"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
-        <!-- <base href="/" /> -->
-    </head>
+<head>
+  <title>Express / Passport</title>
+  <link rel="stylesheet" href="/vendors/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/styles/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Barrio|Black+Ops+One|Creepster|Ewert|Monoton" rel="stylesheet">
+  <script type="text/javascript" src="/vendors/angular.min.js"></script>
+  <script type="text/javascript" src="/vendors/angular-route.min.js"></script>
+  <script type="text/javascript" src="/assets/scripts/clientapp.js"></script>
+  <script src="assets/scripts/services/service.js" charset="utf-8"></script>
+  <script type="text/javascript" src="/assets/scripts/controllers/login.controller.js"></script>
+  <script type="text/javascript" src="/assets/scripts/controllers/user.controller.js"></script>
+  <script src="/assets/scripts/controllers/public.controller.js" charset="utf-8"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+  <!-- <base href="/" /> -->
+</head>
 
-    <body ng-app="myApp">
-      <header ng-include="'/views/templates/header.html'"></header>
+<body ng-app="myApp">
+  <header ng-include="'/views/templates/header.html'"></header>
 
-      <main ng-view></main>
-<div class="shelf" ng-controller='PublicController as pc'>
-    <div class = 'shelfItems' ng-repeat='item in pc.items'>
+  <main ng-view></main>
+  <div class="shelf" ng-controller='PublicController as pc'>
+    <div class = 'shelfItems' ng-repeat='item in pc.items.shelfItems'>
       <p>{{item.user}} &nbsp;posted:</p>
       {{item.description}}
       <img class='smallerPic' ng-src="{{item.imgURL}}" alt=""><br>
-
     </div>
-</div>
-    </body>
+  </div>
+</body>
 </html>
